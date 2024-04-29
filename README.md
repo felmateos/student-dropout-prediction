@@ -30,13 +30,13 @@
 <br />
 <div align="center">
   <a href="https://github.com/felmateos/student-dropout-prediction">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="images/nlogo.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Student Dropout Prediction</h3>
 
   <p align="center">
-    🎓 Quais são os atributos determinantes no sucesso acadêmico de alguém? Isso eu me proponho a descobrir 😎!
+    🎓 Quais são os atributos determinantes na probabilidade de um estudante abandonar o ensino superior? Isso eu me proponho a descobrir 😎!
     <br />
     <br />
     <a href="https://github.com/felmateos/student-dropout-prediction/issues">Report Bug</a>

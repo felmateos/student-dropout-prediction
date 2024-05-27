@@ -36,6 +36,8 @@ def hybrid_balancing(X: pd.DataFrame, y: pd.Series, auto: bool=True, tomek: str=
     X_tl_sm, y_tl_sm = sm.fit_resample(X_tl, y_tl)
 
     df_tl_sm = pd.concat([X_tl_sm, y_tl_sm], axis=1)
+
+    print(df_tl_sm['Target'].value_counts().to_dict())
     
     return df_tl_sm
 

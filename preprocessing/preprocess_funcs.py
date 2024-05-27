@@ -6,10 +6,10 @@ from sklearn.preprocessing import OneHotEncoder
 from sklearn.preprocessing import MinMaxScaler, StandardScaler, Normalizer, RobustScaler, MaxAbsScaler, PowerTransformer
 
 
-def hybrid_balancing(X: pd.DataFrame, y: pd.Series, tomek: str='majority', smote: str='not majority') -> pd.DataFrame:
+def hybrid_balancing(X: pd.DataFrame, y: pd.Series, auto: bool=True, tomek: str='majority', smote: str='not majority') -> pd.DataFrame:
     """
     Retorna um DataFrame com as classes balanceadas das seguinte forma:
-    1. Reduz a classe majoritária usando liagacoes de TOMEK (remover instancias que nao adicionam muita informacao).
+    1. Reduz a classe majoritária usando ligacoes de TOMEK (remover instancias que nao adicionam muita informacao).
     2. Equaliza as demais classes usando SMOTE para ficarem com a mesma quantidade de instancias que a classe majoritaria.
 
     :param X: DataFrame com as variaveis independentes
@@ -24,8 +24,13 @@ def hybrid_balancing(X: pd.DataFrame, y: pd.Series, tomek: str='majority', smote
     :rtype: pd.Dataframe
     """
 
+
     tl = TomekLinks(sampling_strategy=tomek)
     X_tl, y_tl = tl.fit_resample(X, y)
+
+    if auto:
+        smote = y_tl.value_counts().to_dict()
+        smote['Dropout'] = smote['Graduate_or_Enrolled']
 
     sm = SMOTE(sampling_strategy=smote)
     X_tl_sm, y_tl_sm = sm.fit_resample(X_tl, y_tl)
@@ -75,4 +80,3 @@ def one_hot_encoding(cat_vars: pd.DataFrame, cat_cols: list) -> pd.DataFrame:
 
     one_hot_encoder = OneHotEncoder(sparse_output=False)
     return pd.DataFrame(one_hot_encoder.fit_transform(cat_vars), columns=one_hot_encoder.get_feature_names_out(cat_cols))
-

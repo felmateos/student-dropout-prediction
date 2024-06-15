@@ -49,7 +49,7 @@
 
 ---
 
-Este repositório contém o experimento conduzido...
+O presente repositório visa relatar uma análise exploratória e o desenvolvimento de um modelo de aprendizado de máquina preditiva, a fim de compreender o problema do êxodo de estudantes no ensino superior. Assim sendo, é possível relacionar os motivos mais prováveis de tal fenômeno para contribuir à discussão sobre problema. Para fins deste estudo optamos por utilizar o conjunto de dados `Predict students' dropout and academic success". Conduzimos os experimentos utilizando uma variedade de técnicas de tratamento e análise de dados e aprendizado de máquina supervisionado. Como produto final obtivemos um classificador baseado em uma Regressão Logistica que alcançou médias de acurácia e medida f1 macro de 86\% em ambas. Por fim, os resultados mostraram que os motivos principais estão além de fatores internos da universidade, como rendimento acadêmico por exemplo. Mas de fatores e situações socioeconômicas que os estudantes enfrentam durante a graduação. Mais detalhes serão abordados no decorrer do artigo. A implementação prática está disponível em: https://github.com/felmateos/student-dropout-prediction.
 
 ## Git Clone
 

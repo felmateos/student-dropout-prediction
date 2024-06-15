@@ -36,7 +36,7 @@
 <h3 align="center">Student Dropout Prediction</h3>
 
   <p align="center">
-    🎓 Quais são os atributos determinantes na probabilidade de um estudante abandonar o ensino superior? Isso eu me proponho a descobrir 😎!
+    🎓 Quais são os atributos determinantes no abandono estudantil? Isso é o que esse projeto visa descobrir 😎!
     <br />
     <br />
     <a href="https://github.com/felmateos/student-dropout-prediction/issues">Report Bug</a>
